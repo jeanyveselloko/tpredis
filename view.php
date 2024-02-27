@@ -8,13 +8,13 @@ function getUserDetailsFromRedis($userId) {
 }
 
 
-// Check if the user ID is provided in the URL
+
 if (isset($_GET['id'])) {
     $userId = (int)$_GET['id'];
     $userDetails = getUserDetailsFromRedis($userId);
 } else {
-    // Redirect to the user list if no user ID is provided
-    header('Location: index.php');
+    //si pas de user
+    header('Location: acceuil.php');
     exit();
 }
 ?>
@@ -26,6 +26,11 @@ if (isset($_GET['id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Détails de l'Utilisateur</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Exemple d'inclusion de Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
 <div class="container mt-5">

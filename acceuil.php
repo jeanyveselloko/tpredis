@@ -1,6 +1,15 @@
 <?php
 require 'config.php';
+session_start();
 
+if (!isset($_SESSION['user_id'])) {
+    header('Location: login.php');
+    exit;
+}
+
+// You can now display the user's dashboard content
+$userId = $_SESSION['user_id'];
+// Fetch additional user data or perform other actions based on the user ID
 function readUsersFromRedis() {
     global $redis;
     $userList = $redis->lRange('utilisateurs', 0, -1);
@@ -43,11 +52,21 @@ $users = array_merge($usersFromRedis);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liste des Utilisateurs</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Exemple d'inclusion de Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-<div class="container mt-5 col-11">
+<div class="container">
+    <h2>Bienvenue a vous </h2>
+    <p>User ID: <?php echo $userId; ?></p>
+</div>
+<div class="container col-11">
     <h2>Liste des Utilisateurs</h2>
     <a href="add.php" class="btn btn-primary mb-3">Ajouter un Utilisateur</a>
+    <a href="logout.php" class="btn btn-primary pull-right">Logout</a>
     <table class="table">
         <thead>
         <tr>
