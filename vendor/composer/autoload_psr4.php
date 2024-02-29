@@ -7,4 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'Predis\\' => array($vendorDir . '/predis/predis/src'),
+    'PhpParser\\' => array($vendorDir . '/nikic/php-parser/lib/PhpParser'),
+    'Doctrine\\Instantiator\\' => array($vendorDir . '/doctrine/instantiator/src/Doctrine/Instantiator'),
+    'DeepCopy\\' => array($vendorDir . '/myclabs/deep-copy/src/DeepCopy'),
 );
