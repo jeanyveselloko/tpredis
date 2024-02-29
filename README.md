@@ -25,14 +25,21 @@ Système de Gestion d'Utilisateurs
 
 #### 3. Diagrammes
    - **Use Case :**
+   - 
      ![use case drawio](https://github.com/jeanyveselloko/tpredis/assets/83597407/b5cf58b5-cac8-4a46-a061-fc292cd1eb11)
 
    - **Diagramme d'Activité :**
-     - Modélise le flux des activités du système.
+
+     ![mes diagrammes-activité drawio](https://github.com/jeanyveselloko/tpredis/assets/83597407/6b6f350c-a79f-4b26-b328-d84077f322ad)
+
    - **Diagramme de Flux de Données :**
-     - Présente le flux de données au sein du système.
+
+    ![mes diagrammes-flux de données drawio](https://github.com/jeanyveselloko/tpredis/assets/83597407/5488e4dd-5d16-4c04-9f9b-dd7814de132b)
+
    - **Diagramme de Classe (si applicable) :**
-     - Structure et relations entre les classes.
+
+   ![mes diagrammes-classe drawio](https://github.com/jeanyveselloko/tpredis/assets/83597407/f7645592-5291-4f7c-9264-ca7f7e799b57)
+
 
    - **Architecture et Conception :**
      - Détails sur l'architecture, les choix de conception étayés avec des diagrammes et une explication technique.
