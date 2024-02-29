@@ -83,22 +83,22 @@ Notre système de gestion d'utilisateurs utilise une architecture basée sur le 
 
 Coûts sur AWS avec redis : 5$/mois avec 1 base de données
 
-Disponibilité
+Disponibilité:
 Pas de réplication
 
 Persistance des données: non
 
-Connexions
+Connexions:
 256
 
 Sauvegardes quotidiennes et instantanées: oui
 
-CIDR autorise les règles
+CIDR autorise les règles:
 4
 
 Réplication: non
 
-Soutien
+Soutien:
 Standard
 
 Regroupement: non
