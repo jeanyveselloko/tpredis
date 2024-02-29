@@ -62,16 +62,6 @@ Notre système de gestion d'utilisateurs utilise une architecture basée sur le 
    - Utilisation de Redis pour le stockage rapide et en mémoire des données utilisateur.
    - MySQL est utilisé pour la persistance des données et la gestion à long terme.
 
-### Diagrammes d'Architecture
-
-#### Diagramme de Déploiement
-
-![Deployment Diagram](diagrams/deployment_diagram.png)
-
-#### Diagramme de Composants
-
-![Component Diagram](diagrams/component_diagram.png)
-
 #### Explication Technique
 
 - **Frontend WebApp :**
@@ -91,30 +81,28 @@ Notre système de gestion d'utilisateurs utilise une architecture basée sur le 
 
 ### Estimation des Coûts sur AWS
 
-L'estimation des coûts sur AWS dépend de plusieurs facteurs, notamment la quantité de données stockées, la fréquence des accès, et les ressources utilisées. Voici une estimation générale basée sur les services couramment utilisés :
+Coûts sur AWS avec redis : 5$/mois avec 1 base de données
 
-1. **Amazon RDS (MySQL) :**
-   - Coût associé à la taille de la base de données et au niveau d'utilisation des ressources.
-   - Estimation basée sur le modèle de tarification RDS.
+Disponibilité
+Pas de réplication
 
-2. **Amazon ElastiCache (Redis) :**
-   - Coût basé sur la taille du cluster et le nombre d'opérations.
+Persistance des données: non
 
-3. **Amazon EC2 (Frontend et Backend) :**
-   - Coût associé à la taille et à la puissance des instances utilisées.
+Connexions
+256
 
-4. **Amazon S3 (Stockage de fichiers statiques) :**
-   - Coût associé à la quantité de stockage et au transfert de données.
+Sauvegardes quotidiennes et instantanées: oui
 
-5. **Amazon API Gateway :**
-   - Coût basé sur le nombre de requêtes et le volume de données transférées.
+CIDR autorise les règles
+4
 
-### Remarques Financières
+Réplication: non
 
-- L'utilisation des services AWS en tant que modèle cloud permet une mise à l'échelle efficace en fonction de la demande.
-- La tarification peut varier en fonction des régions AWS, des options de paiement, et des ressources spécifiques utilisées.
+Soutien
+Standard
 
-*Ces estimations sont basées sur des données génériques et doivent être ajustées en fonction des besoins spécifiques du projet.*
+Regroupement: non
+
 
 ### Dossiers du Projet
 1. **src/**
